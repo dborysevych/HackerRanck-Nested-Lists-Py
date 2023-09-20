@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    
+    dic = dict()
+    
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        dic[name] = score
+        
+    dic_sorted = dict(sorted(dic.items(), key=lambda item: item[1]))    
+    sec_lowest = list(set(dic_sorted.values()))[1]
+
+    
+    value = sorted([i for i in dic if dic_sorted[i]==sec_lowest])
+    
+    for i in value:
+        print(i)
